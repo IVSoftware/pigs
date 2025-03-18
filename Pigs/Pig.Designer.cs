@@ -29,17 +29,21 @@
         private void InitializeComponent()
         {
             tableLayoutPanel = new TableLayoutPanel();
-            comboBox1 = new ComboBox();
             textBoxID = new TextBox();
+            comboBox1 = new ComboBox();
+            buttonRemove = new Button();
             tableLayoutPanel.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel
             // 
-            tableLayoutPanel.ColumnCount = 1;
+            tableLayoutPanel.BackColor = SystemColors.Window;
+            tableLayoutPanel.ColumnCount = 2;
             tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel.Controls.Add(comboBox1, 0, 0);
+            tableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 45F));
             tableLayoutPanel.Controls.Add(textBoxID, 0, 1);
+            tableLayoutPanel.Controls.Add(comboBox1, 0, 0);
+            tableLayoutPanel.Controls.Add(buttonRemove, 1, 0);
             tableLayoutPanel.Dock = DockStyle.Fill;
             tableLayoutPanel.Location = new Point(0, 0);
             tableLayoutPanel.Name = "tableLayoutPanel";
@@ -51,22 +55,37 @@
             tableLayoutPanel.Size = new Size(150, 150);
             tableLayoutPanel.TabIndex = 0;
             // 
+            // textBoxID
+            // 
+            tableLayoutPanel.SetColumnSpan(textBoxID, 2);
+            textBoxID.Dock = DockStyle.Fill;
+            textBoxID.Location = new Point(3, 40);
+            textBoxID.Name = "textBoxID";
+            textBoxID.PlaceholderText = "Id";
+            textBoxID.Size = new Size(144, 31);
+            textBoxID.TabIndex = 1;
+            // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Male", "Female" });
             comboBox1.Location = new Point(3, 3);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(144, 33);
+            comboBox1.Size = new Size(99, 33);
             comboBox1.TabIndex = 0;
             // 
-            // textBoxID
+            // buttonRemove
             // 
-            textBoxID.Location = new Point(3, 40);
-            textBoxID.Name = "textBoxID";
-            textBoxID.PlaceholderText = "Id";
-            textBoxID.Size = new Size(144, 31);
-            textBoxID.TabIndex = 1;
+            buttonRemove.BackColor = Color.Salmon;
+            buttonRemove.Dock = DockStyle.Fill;
+            buttonRemove.ForeColor = Color.White;
+            buttonRemove.Location = new Point(105, 0);
+            buttonRemove.Margin = new Padding(0);
+            buttonRemove.Name = "buttonRemove";
+            buttonRemove.Size = new Size(45, 37);
+            buttonRemove.TabIndex = 2;
+            buttonRemove.Text = "X";
+            buttonRemove.UseVisualStyleBackColor = false;
             // 
             // Pig
             // 
@@ -84,5 +103,6 @@
         private TableLayoutPanel tableLayoutPanel;
         private ComboBox comboBox1;
         private TextBox textBoxID;
+        private Button buttonRemove;
     }
 }
