@@ -94,7 +94,7 @@
             // 
             buttonRemove.BackColor = Color.DarkSalmon;
             buttonRemove.Dock = DockStyle.Top;
-            buttonRemove.ForeColor = Color.Gray;
+            buttonRemove.ForeColor = Color.LightGray;
             buttonRemove.Location = new Point(3, 3);
             buttonRemove.Name = "buttonRemove";
             buttonRemove.Size = new Size(45, 45);

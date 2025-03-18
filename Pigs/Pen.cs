@@ -24,12 +24,8 @@ namespace Pigs
                 AutoResize();
                 buttonAdd.Enabled = flowLayoutPanel.Controls.Count < 4;
             };
-            buttonRemove.Click += (sender, e) => Parent?.Controls.Remove(this); ;
-        }
-        protected override void OnSizeChanged(EventArgs e)
-        {
-            base.OnSizeChanged(e);
-            AutoResize();
+            buttonRemove.Click += (sender, e) => Parent?.Controls.Remove(this);
+            SizeChanged += (sender, e) => AutoResize();
         }
 
         private void AutoResize()

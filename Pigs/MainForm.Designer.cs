@@ -36,7 +36,8 @@ namespace Pigs
             // flowLayoutPanelPens
             // 
             flowLayoutPanelPens.Dock = DockStyle.Fill;
-            flowLayoutPanelPens.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanelPens.FlowDirection = FlowDirection.LeftToRight;
+            flowLayoutPanelPens.AutoScroll = true;
             flowLayoutPanelPens.Location = new Point(10, 10);
             flowLayoutPanelPens.Name = "flowLayoutPanelPens";
             flowLayoutPanelPens.Size = new Size(758, 924);
@@ -59,20 +60,10 @@ namespace Pigs
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(778, 944);
             Controls.Add(flowLayoutPanelPens);
-            FloatButton();
             Name = "MainForm";
             Padding = new Padding(10);
             Text = "Main Form";
             ResumeLayout(false);
-        }
-
-        private void FloatButton()
-        {
-            var flowRect = flowLayoutPanelPens.Bounds;
-            Controls.Add(buttonAdd);
-            Controls.SetChildIndex(buttonAdd, 0);
-            buttonAdd.Left = flowRect.Right - buttonAdd.Width;
-            buttonAdd.Top = flowRect.Bottom - buttonAdd.Height;
         }
 
         #endregion

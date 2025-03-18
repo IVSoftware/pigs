@@ -67,6 +67,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Male", "Female" });
             comboBox1.Location = new Point(3, 3);
@@ -76,13 +77,14 @@
             // 
             // buttonRemove
             // 
+            buttonRemove.Anchor = AnchorStyles.Top;
             buttonRemove.BackColor = Color.Salmon;
-            buttonRemove.Dock = DockStyle.Fill;
+            buttonRemove.Font = new Font("Segoe UI", 7F);
             buttonRemove.ForeColor = Color.White;
-            buttonRemove.Location = new Point(105, 0);
+            buttonRemove.Location = new Point(110, 0);
             buttonRemove.Margin = new Padding(0);
             buttonRemove.Name = "buttonRemove";
-            buttonRemove.Size = new Size(45, 37);
+            buttonRemove.Size = new Size(35, 35);
             buttonRemove.TabIndex = 2;
             buttonRemove.Text = "X";
             buttonRemove.UseVisualStyleBackColor = false;
