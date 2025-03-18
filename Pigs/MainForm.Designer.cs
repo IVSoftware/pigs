@@ -1,4 +1,5 @@
-﻿namespace Pigs
+﻿
+namespace Pigs
 {
     partial class MainForm
     {
@@ -45,7 +46,6 @@
             // 
             buttonAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             buttonAdd.Font = new Font("Segoe UI", 18F);
-            buttonAdd.Location = new Point(flowLayoutPanelPens.Width - 80, 3);
             buttonAdd.Name = "buttonAdd";
             buttonAdd.Size = new Size(61, 67);
             buttonAdd.TabIndex = 0;
@@ -58,13 +58,21 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(778, 944);
             Controls.Add(flowLayoutPanelPens);
-            Controls.Add(buttonAdd);
-            Controls.SetChildIndex(buttonAdd, 0);
+            FloatButton(buttonAdd);
             Name = "MainForm";
             Padding = new Padding(10);
             Text = "Main Form";
             flowLayoutPanelPens.ResumeLayout(false);
             ResumeLayout(false);
+        }
+
+        private void FloatButton(Button buttonAdd)
+        {
+            var flowRect = flowLayoutPanelPens.Bounds;
+            Controls.Add(buttonAdd);
+            Controls.SetChildIndex(buttonAdd, 0);
+            buttonAdd.Left = flowRect.Right - buttonAdd.Width;
+            buttonAdd.Top = flowRect.Bottom - buttonAdd.Height;
         }
 
         #endregion
