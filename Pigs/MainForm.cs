@@ -9,7 +9,7 @@ namespace Pigs
             {
                 flowLayoutPanelPens.Controls.Add(new Pen 
                 {
-                    Width = flowLayoutPanelPens.Width - flowLayoutPanelPens.Padding.Horizontal,
+                    Width = (flowLayoutPanelPens.Width - flowLayoutPanelPens.Padding.Horizontal) - SystemInformation.VerticalScrollBarWidth,
                 });
             };
         }

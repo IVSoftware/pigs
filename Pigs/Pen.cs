@@ -36,6 +36,7 @@ namespace Pigs
         {
             foreach (var pig in flowLayoutPanel.Controls.OfType<Pig>())
             {
+                var availableWidth = flowLayoutPanel.Width - SystemInformation.VerticalScrollBarWidth;
                 pig.Width = (flowLayoutPanel.Width/4) - pig.Margin.Horizontal - flowLayoutPanel.Padding.Horizontal;
             }
         }

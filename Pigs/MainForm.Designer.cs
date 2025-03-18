@@ -31,12 +31,12 @@ namespace Pigs
         {
             flowLayoutPanelPens = new FlowLayoutPanel();
             buttonAdd = new Button();
-            flowLayoutPanelPens.SuspendLayout();
             SuspendLayout();
             // 
             // flowLayoutPanelPens
             // 
             flowLayoutPanelPens.Dock = DockStyle.Fill;
+            flowLayoutPanelPens.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanelPens.Location = new Point(10, 10);
             flowLayoutPanelPens.Name = "flowLayoutPanelPens";
             flowLayoutPanelPens.Size = new Size(758, 924);
@@ -46,6 +46,7 @@ namespace Pigs
             // 
             buttonAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             buttonAdd.Font = new Font("Segoe UI", 18F);
+            buttonAdd.Location = new Point(0, 0);
             buttonAdd.Name = "buttonAdd";
             buttonAdd.Size = new Size(61, 67);
             buttonAdd.TabIndex = 0;
@@ -58,15 +59,14 @@ namespace Pigs
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(778, 944);
             Controls.Add(flowLayoutPanelPens);
-            FloatButton(buttonAdd);
+            FloatButton();
             Name = "MainForm";
             Padding = new Padding(10);
             Text = "Main Form";
-            flowLayoutPanelPens.ResumeLayout(false);
             ResumeLayout(false);
         }
 
-        private void FloatButton(Button buttonAdd)
+        private void FloatButton()
         {
             var flowRect = flowLayoutPanelPens.Bounds;
             Controls.Add(buttonAdd);
