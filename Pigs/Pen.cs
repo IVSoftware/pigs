@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Pigs
 {
-    public partial class Pen: UserControl
+    public partial class Pen : UserControl
     {
         public Pen()
         {
             InitializeComponent();
+            buttonAdd.Click += (sender, e) =>
+            {
+                flowLayoutPanel.Controls.Add(new Pig 
+                {
+                    Height = this.Height - this.Padding.Vertical,
+                });
+            };
         }
     }
 }

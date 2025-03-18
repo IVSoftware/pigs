@@ -28,18 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            flowLayoutPanelPens = new FlowLayoutPanel();
+            buttonAdd = new Button();
+            flowLayoutPanelPens.SuspendLayout();
             SuspendLayout();
+            // 
+            // flowLayoutPanelPens
+            // 
+            flowLayoutPanelPens.Dock = DockStyle.Fill;
+            flowLayoutPanelPens.Location = new Point(10, 10);
+            flowLayoutPanelPens.Name = "flowLayoutPanelPens";
+            flowLayoutPanelPens.Size = new Size(758, 924);
+            flowLayoutPanelPens.TabIndex = 0;
+            // 
+            // buttonAdd
+            // 
+            buttonAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonAdd.Font = new Font("Segoe UI", 18F);
+            buttonAdd.Location = new Point(flowLayoutPanelPens.Width - 80, 3);
+            buttonAdd.Name = "buttonAdd";
+            buttonAdd.Size = new Size(61, 67);
+            buttonAdd.TabIndex = 0;
+            buttonAdd.Text = "+";
+            buttonAdd.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(778, 944);
+            Controls.Add(flowLayoutPanelPens);
+            Controls.Add(buttonAdd);
+            Controls.SetChildIndex(buttonAdd, 0);
             Name = "MainForm";
+            Padding = new Padding(10);
             Text = "Main Form";
+            flowLayoutPanelPens.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
+
+        private FlowLayoutPanel flowLayoutPanelPens;
+        private Button buttonAdd;
     }
 }
